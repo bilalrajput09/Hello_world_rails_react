@@ -1,8 +1,15 @@
 import React from 'react';
-import HelloWorld from './HelloWorld';
+import Message from './Message';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([{ path: '/', element: <Message /> }]);
 
 const App = () => {
-  return <HelloWorld />;
+  return (
+    <RouterProvider router={router}>
+      <Message />
+    </RouterProvider>
+  );
 };
 
 export default App;
